@@ -1,0 +1,27 @@
+🧵 Java Thread States (Simplified)
+New Thread is created but not started yet.
+
+Ready-to-run
+
+Thread is ready but waiting for CPU time (scheduler will decide).
+
+Running
+
+Thread is currently executing.
+
+Non-runnable states (paused temporarily):
+
+🔹 Sleeping: Thread is paused for a set time (e.g., Thread.sleep()).
+
+🔹 Blocked for join completion: Waiting for another thread to finish (using join()).
+
+🔹 Blocked for I/O (highlighted): Waiting for I/O operation (e.g., file/network) to complete.
+
+🔹 Waiting for notification: Waiting for a signal (wait() method).
+
+🔹 Blocked for lock acquisition: Waiting to enter a synchronized block/method.
+
+Dead
+
+Thread has finished execution or terminated.
+
