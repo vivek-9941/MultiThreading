@@ -1,11 +1,11 @@
 public class ThreadJoining {
     public static void main(String[] args) {
         System.out.println("main started");
-            Thread thread= new Thread( () ->{
-                System.out.println(Thread.currentThread());
+        Thread thread = new Thread(() -> {
+            System.out.println(Thread.currentThread());
 
-            });
-            thread.start();
+        });
+        thread.start();
         try {
             thread.join();
         } catch (InterruptedException e) {
@@ -15,8 +15,8 @@ public class ThreadJoining {
         System.out.println("main ended");
 
         //get the priority  of the thead
-        System.out.println( "priority of  another user  thread "  +thread.getPriority());
-        System.out.println( "priority of  main  thread "  +Thread.currentThread().getPriority());
+        System.out.println("priority of  another user  thread " + thread.getPriority());
+        System.out.println("priority of  main  thread " + Thread.currentThread().getPriority());
     }
 
 }
